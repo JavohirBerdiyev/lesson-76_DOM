@@ -5,11 +5,189 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lesson</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/flexboxgrid.min.css">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* .box {
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      background: red;
+    } */
+  </style>
 </head>
 <body>
+  <!-- <div class="container">
+    <div onclick="changeColor()" id="box" class="box" style=""></div>
+  </div> -->
+  <header id="main-header" class="bg-success text-white p-4 mb-4">
+    <div class="container">
+      <h1 id="header-title" class="header-title">Item Lister <span style="display: none;">Salom</span></h1>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div id="main" class="card card-body">
+      <h2 class="title">Add Items</h2>
+      <a href="#">Hello</a>
+      <form class="form-inline mb-3 d-flex me-3">
+        <input type="text" class="form-control mr-3 w-25">
+        <input type="submit" class="btn btn-dark" value="Submit">
+      </form>
+      <h2 class="title">Items</h2>
+      <ul id="items" class="list-group">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+        <li class="list-group-item">Item 4</li>
+      </ul>
+      <button class="btn btn-dark w-50 m-auto" onclick="clickHusan()">Click me</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
+  <script>
+    // console.log(document);
+    // console.log(document.domain);
+    // console.log(document.URL);
+    // console.log(document.title);
+    // document.title = "Salom";
+    // console.log(document.doctype);
+    // console.log(document.head);
+    // document.head = document.body;X
+    // console.log(document.body);
+    // console.log(document.all);
+    // console.log(document.all[12]);
+    // document.all[12].textContent = "Hello World";
+    // console.log(document.forms[0]);
+    // console.log(document.scripts);
+    // console.log(document.links);
+
+    // GETELEMENTBYID
+    // console.log(document.getElementById('header-title'));
+    // let elHeaderTitle = document.getElementById('header-title');
+    // elHeaderTitle.textContent = "Hello World";
+
+    // let elMainHeader = document.getElementById('main-header');
+    // elMainHeader.textContent = "1502";
+    // elMainHeader.innerText = "1502";
+    // console.log(elHeaderTitle.textContent);
+    // console.log(elHeaderTitle.innerText);
+
+    // elHeaderTitle.textContent = "Hello";
+    // elHeaderTitle.innerText = "<del>Hello</del>";
+    // elHeaderTitle.innerHTML = "<del>Hello</del>";
+
+    // let a = 15;
+    // let b = a;  
+    // b = 10;
+    // console.log(a);
+
+    // let x = { a: 10 };
+    // let y = x;
+    // y.a = 20;
+    // console.log(x);
+
+    // elHeaderTitle.style.color = "#00ff00";
+    // elHeaderTitle.style.fontSize = "50px";
+
+    // GETELEMENTBYClassName
+    
+
+    // function clickHusan() {
+    //   let elList = document.getElementsByClassName('list-group-item');
+    //   console.log(elList[1]);
+    //   elList[1].style.backgroundColor = "#ccc";
+    //   elList[0].style.color = "red";
+
+    //   for(let i = 0; i < elList.length; i++) {
+    //     elList[i].style.borderColor = "blue"
+    //   }
+
+    //   elList[2].style.fontWeight = "800";
+    // }
+
+    // let a = true;
+    // function changeColor() {
+    // let boxBgColor = document.getElementById('box');
+    //   if(a) {
+    //     boxBgColor.style.background = "blue";
+    //     a = false;
+    //   } else {
+    //     boxBgColor.style.background = "red";
+    //     a = true;
+    //   }
+    // }
+
+    // GETELEMENTBYTAGName
+    // let elList = document.getElementsByTagName('h1');
+    // console.log(elList);
+
+    // QUERYSELECTOR
+    // let header = document.querySelector('#main-header');
+    
+    // header.style.borderBottom = "solid 4px #ff0000";
+    // let headingone = document.querySelector('h1');
+    // headingone.style.borderBottom = "solid 4px #ff0000";
+    // let headingone = document.querySelectorAll('h1');
+    // console.log(headingone);
+
+    // let elList = document.querySelectorAll('.list-group-item'); 
+    // console.log(elList);
+
+    // let elList = document.querySelector('.list-group-item:nth-child(4)'); 
+    // elList.style.color = "red";
+    // console.log(elList);
+
+    // Nth-child
+    // let odd = document.querySelectorAll('.list-group-item:nth-child(odd)');
+    // let even = document.querySelectorAll('.list-group-item:nth-child(even)');  
+    // // elList.style.color = "red";
+
+    // for(let i = 0; i < odd.length; i++ ) {
+    //   odd[i].style.background = "#ccc";
+    //   even[i].style.background = "blue";
+    //   even[i].style.color = "#fff";
+    // }
+
+
+    // let itemList = document.querySelector('#items');
+    // parentNode
+    // console.log(itemList.parentNode);
+    // itemList.parentNode.parentNode.parentNode.style.backgroundColor = "red";
+
+    // childNode
+    // console.log(itemList.childNodes); 
+    // console.log(itemList.children); 
+    // itemList.children[1].style.backgroundColor = "red";
+
+    
+    // Create a div
+    let newDiv = document.createElement('div');
+
+    // add class
+    newDiv.className='hello';
+    
+    // add id
+    newDiv.id = "demo";
+
+    // add attr
+    newDiv.setAttribute('title', "Hello div");
+
+    // text node
+    let newDivText = document.createTextNode('Men tug\'ildim');
+
+    // add text to div
+    newDiv.appendChild(newDivText);
+    
+    let container = document.querySelector('header .container');
+    let h1 = document.querySelector('header h1');
+
+    // container.insertBefore(newDiv, h1);
+    // container.appendChild(newDiv);
+
+    console.log(newDiv);
+  </script> 
 </body>
 </html>
